@@ -25,3 +25,12 @@ th,
 td {
   padding: 10px;
 }
+
+input[type="submit"] {
+  min-width: 70%;
+  border-radius: 4px;
+  background-color: rgb(32, 32, 238);
+  color: wheat;
+  border: none;
+  line-height: 2em;
+}

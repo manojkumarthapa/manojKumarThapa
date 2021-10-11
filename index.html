@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="libs/css/style.css">
+    
     <title>Document</title>
 </head>
 <body>
@@ -19,56 +20,54 @@
             <tr>
                 <form action="#" method="GET">
                     <!-- https://www.geonames.org/export/JSON-webservices.html#weatherJSON -->
-                    <td><label for="weather">Check Weather</label></td>
+                    <td><label>Check Nearby Weather Stations</label></td>
                     <td>
                         <p>Please enter the cooridates:</p>
-                        <input type="text" id="weather" name="north" placeholder="North Coordinates">
+                        <input type="number" id="weatherNorth" name="north" placeholder="North Coordinates" required>
                         <br>
-                        <input type="text" id="weather" name="south" placeholder="South Coordinates">
+                        <input type="number" id="weatherSouth" name="south" placeholder="South Coordinates" required>
                         <br>
-                        <input type="text" id="weather" name="east" placeholder="East Coordinates">
+                        <input type="number" id="weatherEast" name="east" placeholder="East Coordinates" required>
                         <br>
-                        <input type="text" id="weather" name="west" placeholder="West Coordinates">
+                        <input type="number" id="weatherWest" name="west" placeholder="West Coordinates" required>
                     </td>
-                    <td><input type="submit" value="Get Weather"></td>
+                    <td><input type="submit" value="Get Weather" id="weatherSubmit"></td>
                 </form>
             </tr>
             <!-- https://www.geonames.org/export/web-services.html#findNearbyPlaceName -->
             <tr>
                 <form action="#" method="GET">
-                    <td><label for="nearbyPlace">Find Nearby Populated Place</label></td>
+                    <td><label>Find Nearby Populated Place</label></td>
                     <td>
                         <p>Please enter the latitude and longitude:</p>
-                        <input type="text" id="nearbyPlace" name="lat" placeholder="latitude">
+                        <input type="number" id="nearbyPlaceLat" name="lat" placeholder="latitude" required>
                         <br>
-                        <input type="text" id="nearbyPlace" name="lng" placeholder="longitude">
+                        <input type="number" id="nearbyPlaceLng" name="lng" placeholder="longitude" required>
                     </td>
-                    <td><input type="submit" value="Get Location"></td>
+                    <td><input type="submit" value="Get Location" id="placeSubmit"></td>
                 </form>
             </tr>
             <!-- https://www.geonames.org/export/JSON-webservices.html#earthquakesJSON -->
             <tr>
-                <form action="#" method="GET">
-                    <td><label for="earthquake">Check past Earthquakes</label></td>
+                <form action="#" method="GET" target="_blank">
+                    <td><label>Check past USA Earthquakes</label></td>
                     <td>
                         <p>Please enter the cooridates:</p>
-                        <input type="text" id="earthquake" name="north" placeholder="North Coordinates">
+                        <input type="number" id="earthquakeNorth" name="north" placeholder="North Coordinates" required>
                         <br>
-                        <input type="text" id="earthquake" name="south" placeholder="South Coordinates">
+                        <input type="number" id="earthquakeSouth" name="south" placeholder="South Coordinates" required>
                         <br>
-                        <input type="text" id="earthquake" name="east" placeholder="East Coordinates">
+                        <input type="number" id="earthquakeEast" name="east" placeholder="East Coordinates" required>
                         <br>
-                        <input type="text" id="earthquake" name="west" placeholder="West Coordinates">
-                        <br>
-                        <input type="date" name="date" id="earthquake">
+                        <input type="number" id="earthquakeWest" name="west" placeholder="West Coordinates" required>
                     </td>
-                    <td><input type="submit" value="Get Past Earthquakes"></td>
+                    <td><input type="submit" value="Get Past Earthquakes" id="earthquakeSubmit"></td>
                 </form>
             </tr>
 
             <tr>
-                <td colspan="3" id="result">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat libero sunt architecto non magnam laudantium
+                <td colspan="3" >
+                    <p id="result">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat libero sunt architecto non magnam laudantium
                         perferendis distinctio est sit placeat tenetur temporibus deserunt maiores consequatur doloremque unde dignissimos
                         amet reiciendis, nulla ratione commodi quos deleniti ducimus sint. Doloribus culpa aliquam repudiandae labore, ad
                         minima assumenda illum perferendis quidem repellendus id et quos dolorem animi error expedita, similique earum sint.
@@ -80,5 +79,11 @@
             </tr>
         </tbody>
     </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="libs/js/script.js"></script>
+
+
 </body>
 </html>
